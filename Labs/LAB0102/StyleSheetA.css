@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+p {
+  font-style: italic;
+  font-size: x-large;
+}
+
+h1{
+  font-style: normal;
+  font-size: xx-large;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+}

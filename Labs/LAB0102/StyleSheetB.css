@@ -1,0 +1,21 @@
+input[type=text] {
+    font-size: medium;
+    font-style: italic;
+    border: 2px solid red;
+  }
+
+  input[type=password] {
+    border: 2px solid red;
+  }
+
+  label{
+      font-size: x-large;
+      font-style: italic;
+  }
+
+  label[for=txtinpt]{
+      color: yellow;
+  }
+  label[for=passinpt]{
+    color: yellow;
+}
