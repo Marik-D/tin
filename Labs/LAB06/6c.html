@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6c</title>
+    <script>
+        function validate() {
+            let numPattern = /^\d\d*$/;
+            let numCheck = numPattern.test(document.getElementById("inp1").value);
+            let eMail = document.getElementById("inp2").value;
+            let eMailCheck = eMail.search(/@.*\./);
+            if (numCheck && eMailCheck !== -1) {
+                return true;
+            } else if (!numCheck && eMailCheck === -1) {
+                document.getElementById("inplbl1").style.color = "red";
+                document.getElementById("inplbl2").style.color = "red";
+                return false;
+            } else if (!numCheck) {
+                document.getElementById("inplbl1").style.color = "red";
+                return false;
+            } else {
+                document.getElementById("inplbl2").style.color = "red";
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <label for="inp1" id="inplbl1">Enter a number, this is oligatory.</label>
+        <input type="text" id="inp1"><br>
+        <label for="inp2" id="inplbl2">Enter email</label>
+        <input type="text" id="inp2"><br>
+        <button type="submit" onclick="validate()">Submit</button>
+    </form>
+
+
+</body>
+
+</html>

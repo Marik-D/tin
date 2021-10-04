@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6d</title>
+    <script>
+        function validate() {
+            document.getElementById("table").innerHTML += "<tr><td>" +
+                document.getElementById("name").value + "</td><td>" +
+                document.getElementById("surname").value + "</td><td>" +
+                document.getElementById("age").value + "</td></tr>";
+
+            document.getElementById("name").value = "";
+            document.getElementById("surname").value = "";
+            document.getElementById("age").value = "";
+
+        }
+    </script>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <td>Jon</td>
+            <td>Doe</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Jackson</td>
+            <td>34</td>
+        </tr>
+
+    </table>
+    <br><br>
+    <form onsubmit="return false">
+        <label for="name">Enter name</label>
+        <input type="text" id="name"><br><br>
+        <label for="surname">Enter surname</label>
+        <input type="text" id="surname"><br><br>
+        <label for="age">Enter age</label>
+        <input type="text" id="age"><br><br>
+        <button type="submit" onclick="validate()">Submit</button>
+
+    </form>
+</body>
+
+</html>
